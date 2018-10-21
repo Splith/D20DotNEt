@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DND5E.Base.Dice
+namespace D20DotNet.Base.Dice
 {
 	public abstract class DiceRoll
 	{

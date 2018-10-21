@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DND5E.Base.Dice
+namespace D20DotNet.Base.Dice
 {
 	public class SimpleRoll : DiceRoll
 	{

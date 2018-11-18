@@ -40,7 +40,7 @@
 				  Grid.Row="1" Grid.Column="0">
 			<ListView.ItemTemplate>
 				<DataTemplate>
-					<control:CharacterBattleControl Character="{Binding .}" />
+					<control:CharacterBattleControl Height="50" Character="{Binding .}" />
 				</DataTemplate>
 			</ListView.ItemTemplate>
 		</ListView>

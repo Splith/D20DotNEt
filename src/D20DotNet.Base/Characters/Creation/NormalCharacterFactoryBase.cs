@@ -36,12 +36,16 @@ namespace D20DotNet.Base.Characters.Creation
 				Race.Speed,
 				0); // ToDo: Challenge should be provided by Create Character
 
+			result.Description = String.Format("{0} {1}", Class.ClassName, Race.RaceName);
+
 			this.SetStats(result);
 
 			foreach (String skill in Race.Skills)
 				result.Skills.Add(skill);
 			foreach (String lang in Race.Languages)
 				result.Languages.Add(lang);
+			foreach(IAction action in Class.Actions)
+				result.Actions.Add(action);
 
 			return result;
 		}

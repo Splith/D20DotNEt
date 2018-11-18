@@ -66,7 +66,7 @@ namespace D20DotNet.DMDashboard.VM
 			{
 				StringBuilder sbActionText = new StringBuilder();
 				foreach (var action in _component.Actions)
-					sbActionText.AppendLine(action.Description);
+					sbActionText.AppendLine(action.Title + ": " + action.ActionText);
 
 				return sbActionText.ToString();
 			}

@@ -1,0 +1,63 @@
+﻿<UserControl x:Class="D20DotNet.DMDashboard.Controls.CharacterBattleControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:D20DotNet.DMDashboard.Controls"
+			 xmlns:vm="clr-namespace:D20DotNet.DMDashboard.VM"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="550">
+
+    <Grid DataContext="{Binding Character}">
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height="25" />
+			<RowDefinition Height="25" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<Label Content="{Binding Description}" 
+			Grid.Row="0" />
+
+		<StackPanel Orientation="Horizontal"
+			Grid.Row="1">
+
+			<!-- Armor Class -->
+			<Label Content="AC: " />
+			<Label Content="{Binding ArmorClass}" />
+			<!-- Divider -->
+			<Label Content=" | " />
+			<!-- Spped -->
+			<Label Content="Speed: " />
+			<Label Content="{Binding Speed}" />
+			<!-- Divider -->
+			<Label Content=" | " />
+			<!-- Attributes -->
+			<Label Content="STR: " />
+			<Label Content="{Binding Component.STR}" />
+			<!-- Divider -->
+			<Label Content=" | " />
+			<Label Content="CON: " />
+			<Label Content="{Binding Component.CON}" />
+			<!-- Divider -->
+			<Label Content=" | " />
+			<Label Content="INT: " />
+			<Label Content="{Binding Component.INT}" />
+			<!-- Divider -->
+			<Label Content=" | " />
+			<Label Content="WIS: " />
+			<Label Content="{Binding Component.WIS}" />
+			<!-- Divider -->
+			<Label Content=" | " />
+			<Label Content="DEX: " />
+			<Label Content="{Binding Component.DEX}" />
+			<!-- Divider -->
+			<Label Content=" | " />
+			<Label Content="CHA: " />
+			<Label Content="{Binding Component.CHA}" />
+		</StackPanel>
+
+		<Label Content="{Binding ActionText}" 
+			   Grid.Row="2"/>
+	</Grid>
+</UserControl>

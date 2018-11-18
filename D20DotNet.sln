@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D20DotNet.Base", "src\D20Do
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D20DotNet.Base.Tests", "tests\D20DotNet.Base.Tests\D20DotNet.Base.Tests.csproj", "{726DBE74-747C-474A-A8DA-9376B4E72502}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D20DotNet.DMDungeon", "D20DotNet.DMDungeon\D20DotNet.DMDungeon.csproj", "{C2F68917-3F84-4C52-80B6-5893B64692B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D20DotNet.DMDashboard", "src\D20DotNet.DMDashboard\D20DotNet.DMDashboard.csproj", "{0C0F7A82-E039-4F07-9503-F4B9D468DFF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{726DBE74-747C-474A-A8DA-9376B4E72502}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{726DBE74-747C-474A-A8DA-9376B4E72502}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{726DBE74-747C-474A-A8DA-9376B4E72502}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C2F68917-3F84-4C52-80B6-5893B64692B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2F68917-3F84-4C52-80B6-5893B64692B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C2F68917-3F84-4C52-80B6-5893B64692B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C2F68917-3F84-4C52-80B6-5893B64692B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C0F7A82-E039-4F07-9503-F4B9D468DFF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C0F7A82-E039-4F07-9503-F4B9D468DFF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C0F7A82-E039-4F07-9503-F4B9D468DFF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C0F7A82-E039-4F07-9503-F4B9D468DFF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

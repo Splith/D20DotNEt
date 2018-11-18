@@ -30,7 +30,7 @@ namespace D20DotNet.Base.Characters.Race
 		public int AdjustmentWIS { get; set; }
 		public int AdjustmentCHA { get; set; }
 
-		public HashSet<string> Skills { get; private set; }
-		public HashSet<string> Languages { get; private set; }
+		public HashSet<string> Skills { get; set; }
+		public HashSet<string> Languages { get; set; }
 	}
 }

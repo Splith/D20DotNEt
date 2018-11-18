@@ -25,7 +25,7 @@ namespace D20DotNet.Base.Tests.Characters.Creation
 				{
 					AdjustmentCON = 2,
 				},
-				new SimpleClass("Test", new ConstantRoll(20)));
+				new BasicClass("Test", new ConstantRoll(20)));
 
 			foreach (var skill in new HashSet<String>() { "Darkvision", "Dwarvin Resilliance", "Stonecutting" })
 				characterFactory.Race.Skills.Add(skill);

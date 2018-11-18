@@ -6,14 +6,14 @@ using D20DotNet.Base.Dice;
 
 namespace D20DotNet.Base.Characters.Classes
 {
-	public class SimpleClass : IClass
+	public class BasicClass : IClass
 	{
-		public SimpleClass()
+		public BasicClass()
 		{
 			Actions = new List<IAction>();
 		}
 
-		public SimpleClass(String className, DiceRoll hitPointDice)
+		public BasicClass(String className, DiceRoll hitPointDice)
 			: this()
 		{
 			ClassName = className;
@@ -22,7 +22,7 @@ namespace D20DotNet.Base.Characters.Classes
 
 		public string ClassName { get; set; }
 		public DiceRoll HitPointDice { get; set; }
-		public StatEnum[] StatPriority { get; private set; }
-		public List<IAction> Actions { get; private set; }
+		public StatEnum[] StatPriority { get; set; }
+		public List<IAction> Actions { get; set; }
 	}
 }

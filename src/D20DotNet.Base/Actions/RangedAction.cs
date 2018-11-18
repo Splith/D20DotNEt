@@ -5,7 +5,7 @@ using D20DotNet.Base.Dice;
 
 namespace D20DotNet.Base.Actions
 {
-	public abstract class RangedAction : IAction
+	public class RangedAction : IAction
 	{
 		public RangedAction()
 		{

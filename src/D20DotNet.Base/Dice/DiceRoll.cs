@@ -8,5 +8,6 @@ namespace D20DotNet.Base.Dice
 	{
 		protected static Random random = new Random();
 		public abstract int Roll();
+		public abstract String Description { get; }
 	}
 }

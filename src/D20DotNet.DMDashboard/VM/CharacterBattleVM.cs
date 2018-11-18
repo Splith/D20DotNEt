@@ -7,12 +7,12 @@ using D20DotNet.Base.Characters;
 
 namespace D20DotNet.DMDashboard.VM
 {
-	public class CharacterControlVM : ViewModelBase
+	public class CharacterBattleVM : ViewModelBase
 	{
 		private CharacterBase _component;
 		private int _battleHP;
 
-		public CharacterControlVM() { this.PropertyChanged += CharacterViewVM_PropertyChanged; }
+		public CharacterBattleVM() { this.PropertyChanged += CharacterViewVM_PropertyChanged; }
 
 		// Internal Event Listener
 		private void CharacterViewVM_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -29,7 +29,7 @@ namespace D20DotNet.DMDashboard.VM
 			}
 		}
 
-		public CharacterControlVM(CharacterBase component)
+		public CharacterBattleVM(CharacterBase component)
 		{
 			_component = component;
 		}

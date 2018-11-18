@@ -25,6 +25,7 @@ namespace D20DotNet.Base.Characters.Creation
 		public IRace Race { get; set; }
 		public IClass Class { get; set; }
 		public DiceRoll BaseStatRoll { get; set; }
+		public String CharacterDescription { get; set; }
 
 		// ToDo: Make CreateCharacter use a challenge
 		public override CharacterBase CreateCharacter()

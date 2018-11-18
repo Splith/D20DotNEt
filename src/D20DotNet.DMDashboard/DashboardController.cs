@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using D20DotNet.DMDashboard.VM;
 using D20DotNet.Base.Characters;
 using D20DotNet.Base.Characters.Creation;
 using D20DotNet.Base.Characters.Race;
@@ -13,7 +14,7 @@ namespace D20DotNet.DMDashboard
 {
     public class DashboardController
     {
-		public List<CharacterBase> GetCharacters()
+		public List<CharacterBattleVM> GetCharacters()
 		{
 			CharacterFactoryBase factoryBase =
 				new NormalCharacterFactoryBase(
@@ -23,6 +24,7 @@ namespace D20DotNet.DMDashboard
 
 			return Enumerable.Range(1, 10)
 				.Select(i => factoryBase.CreateCharacter())
+				.Select(i => new VM.CharacterBattleVM(i))
 				.ToList();
 		}
     }

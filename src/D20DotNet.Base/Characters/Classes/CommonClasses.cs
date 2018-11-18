@@ -14,6 +14,15 @@ namespace D20DotNet.Base.Characters.Classes
 				Actions = new List<Actions.IAction>()
 				{
 					new RangedAction("Crossbow", "", new SimpleRoll(1, 8, 0), 80, 320)
+				},
+				StatPriority = new StatEnum[]
+				{
+					StatEnum.DEX,
+					StatEnum.INT,
+					StatEnum.CON,
+					StatEnum.WIS,
+					StatEnum.STR,
+					StatEnum.CHA
 				}
 			};
 	}

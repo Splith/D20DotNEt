@@ -59,7 +59,7 @@
     <Compile Include="Controls\CharacterBattleControl.xaml.cs">
       <DependentUpon>CharacterBattleControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="VM\CharacterControlVM.cs" />
+    <Compile Include="VM\CharacterBattleVM.cs" />
     <Compile Include="VM\DashboardVM.cs" />
     <Compile Include="VM\RelayCommand.cs" />
     <Compile Include="VM\ViewModelBase.cs" />

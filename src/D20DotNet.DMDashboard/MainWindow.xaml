@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:D20DotNet.DMDashboard"
 		xmlns:vm="clr-namespace:D20DotNet.DMDashboard.VM"
+		xmlns:control="clr-namespace:D20DotNet.DMDashboard.Controls"
         mc:Ignorable="d"
         Title="Battle Dashboard" Height="450" Width="800">
 	<Window.Resources>
@@ -34,5 +35,14 @@
 			<Button Style="{StaticResource HeaderButton}" Content="New Combat" VerticalContentAlignment="Center" />
 			<Button Style="{StaticResource HeaderButton}" Content="Edit Roster" VerticalContentAlignment="Center" Command="{Binding EditRosterCommand}"/>
 		</StackPanel>
+
+		<ListView ItemsSource="{Binding Combatents}"
+				  Grid.Row="1" Grid.Column="0">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<control:CharacterBattleControl Character="{Binding .}" />
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
 	</Grid>
 </Window>

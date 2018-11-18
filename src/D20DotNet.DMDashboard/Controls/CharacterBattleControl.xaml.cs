@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using D20DotNet.DMDashboard.VM;
 using D20DotNet.Base.Characters;
 
 namespace D20DotNet.DMDashboard.Controls
@@ -29,7 +30,7 @@ namespace D20DotNet.DMDashboard.Controls
 		public static readonly DependencyProperty CharacterProperty =
 			DependencyProperty.Register(
 				"Character",
-				typeof(CharacterBase),
+				typeof(CharacterBattleVM),
 				typeof(CharacterBattleControl));
 
 		public CharacterBase Character

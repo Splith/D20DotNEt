@@ -16,10 +16,10 @@ namespace D20DotNet.DMDashboard.VM
 		public DashboardVM()
 		{
 			_controller = new DashboardController();
-			Combatents = new ObservableCollection<CharacterBase>();
+			Combatents = new ObservableCollection<CharacterBattleVM>();
 		}
 
-		public ObservableCollection<CharacterBase> Combatents { get; private set; }
+		public ObservableCollection<CharacterBattleVM> Combatents { get; private set; }
 
 		public RelayCommand EditRosterCommand
 		{

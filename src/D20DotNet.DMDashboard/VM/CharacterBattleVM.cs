@@ -11,6 +11,7 @@ namespace D20DotNet.DMDashboard.VM
 	{
 		private CharacterBase _component;
 		private int _battleHP;
+		private int? _initiative;
 
 		public CharacterBattleVM() { this.PropertyChanged += CharacterViewVM_PropertyChanged; }
 
@@ -58,6 +59,12 @@ namespace D20DotNet.DMDashboard.VM
 		public int Speed
 		{
 			get => _component.Speed;
+		}
+
+		public int? Initiative
+		{
+			get => _initiative + (_component.DEX - 10) / 2;
+			set => SetProperty(ref _initiative, value);
 		}
 
 		public String ActionText

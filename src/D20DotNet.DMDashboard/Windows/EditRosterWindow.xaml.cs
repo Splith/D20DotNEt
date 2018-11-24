@@ -1,0 +1,40 @@
+﻿using D20DotNet.DMDashboard.VM;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
+
+namespace D20DotNet.DMDashboard.Windows
+{
+	/// <summary>
+	/// Interaction logic for EditRosterWindow.xaml
+	/// </summary>
+	public partial class EditRosterWindow : Window
+	{
+		public EditRosterWindow()
+		{
+			InitializeComponent();
+		}
+
+		public static readonly DependencyProperty EditRosterVMProperty =
+			DependencyProperty.Register(
+				"EditRosterVM",
+				typeof(EditRosterVM),
+				typeof(EditRosterWindow));
+
+		public EditRosterVM EditRosterVM
+		{
+			get => (EditRosterVM)GetValue(EditRosterVMProperty);
+			set => SetValue(EditRosterVMProperty, value);
+		}
+	}
+}

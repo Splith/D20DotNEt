@@ -22,6 +22,9 @@
 		<StackPanel Orientation="Horizontal"
 			Grid.Row="1">
 
+			<!-- Initiative -->
+			<Label Content="Init: " />
+			<Label Content="{Binding Initiative}" />
 			<!-- Armor Class -->
 			<Label Content="AC: " />
 			<Label Content="{Binding ArmorClass}" />

@@ -9,11 +9,13 @@ using D20DotNet.Base.Characters.Creation;
 using D20DotNet.Base.Characters.Race;
 using D20DotNet.Base.Characters.Classes;
 using D20DotNet.Base.Dice;
+using D20DotNet.DMDashboard.Data;
 
 namespace D20DotNet.DMDashboard
 {
     public class DashboardController
     {
+		private CharacterCreatorProvider _characterCreatorProvider;
 		public List<CharacterBattleVM> GetCharacters()
 		{
 			CharacterFactoryBase factoryBase =
@@ -26,6 +28,30 @@ namespace D20DotNet.DMDashboard
 				.Select(i => factoryBase.CreateCharacter())
 				.Select(i => new VM.CharacterBattleVM(i))
 				.ToList();
+		}
+
+		public List<CharacterBattleVM> EditRoster(List<CharacterBattleVM> roster)
+		{
+			if (_characterCreatorProvider == null)
+				_characterCreatorProvider = new CharacterCreatorProvider();
+
+			EditRosterVM data = new EditRosterVM();
+
+			foreach (var characterClass in _characterCreatorProvider.CharacterClasses)
+				data.Classes.Add(characterClass);
+
+			foreach (var characterRace in _characterCreatorProvider.CharacterRaces)
+				data.Races.Add(characterRace);
+
+			foreach (var combatent in roster)
+				data.Combatents.Add(combatent);
+
+			Windows.EditRosterWindow editRosterWindow = new Windows.EditRosterWindow();
+			editRosterWindow.EditRosterVM = data;
+
+			editRosterWindow.ShowDialog();
+
+			return data.Combatents.ToList();
 		}
     }
 }

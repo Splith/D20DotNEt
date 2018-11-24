@@ -34,6 +34,7 @@
 		<StackPanel Orientation="Horizontal" Grid.Row="0">
 			<Button Style="{StaticResource HeaderButton}" Content="New Combat" VerticalContentAlignment="Center" />
 			<Button Style="{StaticResource HeaderButton}" Content="Edit Roster" VerticalContentAlignment="Center" Command="{Binding EditRosterCommand}"/>
+			<Button Style="{StaticResource HeaderButton}" Content="Roll Initiative" VerticalContentAlignment="Center" Command="{Binding RollInitiativeCommand}"/>
 		</StackPanel>
 
 		<ListView ItemsSource="{Binding Combatents}"
